@@ -43,7 +43,7 @@
   <body>
     <header class="container mx-auto">
       <!-- nav bar -->
-      <div class="navbar bg-base-100">
+      <div class="navbar bg-base-100 md:mt-10 mt-6">
         <div class="navbar-start">
           <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -64,43 +64,88 @@
             </div>
             <ul
               tabindex="0"
-              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-24"
             >
-              <li><a class="bg-[#12132d]">Item 1</a></li>
               <li>
-                <a>Parent</a>
-                <ul class="p-2">
-                  <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
-                </ul>
+                <a
+                  class="bg-[#030712] bg-opacity-10 border-[#12132d] border-opacity-30 rounded-full w-[56px] aspect-square flex justify-center items-center hover:bg-gray-50 tooltip tooltip-right"
+                  data-tip="Home"
+                  ><i class="fa-solid fa-house"></i
+                ></a>
               </li>
-              <li><a>Item 3</a></li>
+
+              <li>
+                <a
+                  class="bg-[#030712] bg-opacity-10 border-[#12132d] border-opacity-30 rounded-full w-[56px] aspect-square flex justify-center items-center hover:bg-gray-50 tooltip tooltip-right"
+                  data-tip="write to us"
+                  ><i class="fa-solid fa-pen"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="bg-[#030712] bg-opacity-10 border-[#12132d] border-opacity-30 rounded-full w-[56px] aspect-square flex justify-center items-center hover:bg-gray-50 tooltip tooltip-right"
+                  data-tip="connet"
+                  ><i class="fa-solid fa-user-plus"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="bg-[#030712] bg-opacity-10 border-[#12132d] border-opacity-30 rounded-full w-[56px] aspect-square flex justify-center items-center hover:bg-gray-50 tooltip tooltip-right"
+                  data-tip="Brands"
+                  ><i class="fa-brands fa-font-awesome"></i
+                ></a>
+              </li>
             </ul>
           </div>
           <a
-            class="btn btn-ghost md:text-4xl font-black text-[#12132d] font-mulish"
+            class="btn btn-ghost md:text-4xl text-2xl font-black text-[#12132d] font-mulish"
             >ReTro</a
           >
         </div>
         <div class="navbar-end grow hidden lg:flex">
-          <ul class="menu menu-horizontal px-1">
-            <li><a>Item 1</a></li>
+          <ul class="menu menu-horizontal px-1 lg:flex lg:gap-4">
             <li>
-              <details>
-                <summary>Parent</summary>
-                <ul class="p-2">
-                  <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
-                </ul>
-              </details>
+              <a
+                class="bg-[#030712] bg-opacity-10 border-[#12132d] border-opacity-30 rounded-full w-[56px] aspect-square flex justify-center items-center hover:bg-gray-50 tooltip"
+                data-tip="Home"
+                ><i class="fa-solid fa-house"></i
+              ></a>
             </li>
-            <li><a>Item 3</a></li>
+
+            <li>
+              <a
+                class="bg-[#030712] bg-opacity-10 border-[#12132d] border-opacity-30 rounded-full w-[56px] aspect-square flex justify-center items-center hover:bg-gray-50 tooltip"
+                data-tip="write to us"
+                ><i class="fa-solid fa-pen"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                class="bg-[#030712] bg-opacity-10 border-[#12132d] border-opacity-30 rounded-full w-[56px] aspect-square flex justify-center items-center hover:bg-gray-50 tooltip"
+                data-tip="connet"
+                ><i class="fa-solid fa-user-plus"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                class="bg-[#030712] bg-opacity-10 border-[#12132d] border-opacity-30 rounded-full w-[56px] aspect-square flex justify-center items-center hover:bg-gray-50 tooltip"
+                data-tip="Brands"
+                ><i class="fa-brands fa-font-awesome"></i
+              ></a>
+            </li>
           </ul>
         </div>
-        <div class="justify-end">
-          <a class="btn">Button</a>
+        <div class="md:justify-end sm:navbar-end ml-10 hover:bg-gray-50">
+          <a
+            class="btn px-[30px] py-2 md:px-[40px] md:py-4 bg-[#7978ff] text-white font-mulish md:text-xl text-sm font-bold h-auto rounded-full"
+            >Button</a
+          >
         </div>
       </div>
     </header>
+
+    <main class="container mx-auto">
+      <!-- banner section -->
+    </main>
   </body>
 </html>
