@@ -20,6 +20,7 @@
           extend: {
             colors: {
               clifford: "#da373d",
+              "primary-text": "#12132d",
             },
           },
         },
@@ -41,34 +42,73 @@
     ></script>
   </head>
   <body>
-    <header class="container mx-auto">
+    <header class="container mx-auto px-5 md:px-24">
       <!-- nav bar -->
-      <div class="navbar bg-base-100 md:mt-10 mt-6">
-        <div class="navbar-start">
-          <div class="dropdown">
-            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+      <div class="container mx-auto">
+        <div class="navbar bg-base-100 md:mt-10 mt-6">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-24"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
+                <li>
+                  <a
+                    class="bg-[#030712] bg-opacity-10 border-[#12132d] border-opacity-30 rounded-full w-[56px] aspect-square flex justify-center items-center hover:bg-gray-50 tooltip tooltip-right"
+                    data-tip="Home"
+                    ><i class="fa-solid fa-house"></i
+                  ></a>
+                </li>
+
+                <li>
+                  <a
+                    class="bg-[#030712] bg-opacity-10 border-[#12132d] border-opacity-30 rounded-full w-[56px] aspect-square flex justify-center items-center hover:bg-gray-50 tooltip tooltip-right"
+                    data-tip="write to us"
+                    ><i class="fa-solid fa-pen"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    class="bg-[#030712] bg-opacity-10 border-[#12132d] border-opacity-30 rounded-full w-[56px] aspect-square flex justify-center items-center hover:bg-gray-50 tooltip tooltip-right"
+                    data-tip="connet"
+                    ><i class="fa-solid fa-user-plus"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    class="bg-[#030712] bg-opacity-10 border-[#12132d] border-opacity-30 rounded-full w-[56px] aspect-square flex justify-center items-center hover:bg-gray-50 tooltip tooltip-right"
+                    data-tip="Brands"
+                    ><i class="fa-brands fa-font-awesome"></i
+                  ></a>
+                </li>
+              </ul>
             </div>
-            <ul
-              tabindex="0"
-              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-24"
+            <a
+              class="btn btn-ghost md:text-4xl text-2xl font-black text-[#12132d] font-mulish"
+              >ReTro</a
             >
+          </div>
+          <div class="navbar-end grow hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 lg:flex lg:gap-4">
               <li>
                 <a
-                  class="bg-[#030712] bg-opacity-10 border-[#12132d] border-opacity-30 rounded-full w-[56px] aspect-square flex justify-center items-center hover:bg-gray-50 tooltip tooltip-right"
+                  class="bg-[#030712] bg-opacity-10 border-[#12132d] border-opacity-30 rounded-full w-[56px] aspect-square flex justify-center items-center hover:bg-gray-50 tooltip"
                   data-tip="Home"
                   ><i class="fa-solid fa-house"></i
                 ></a>
@@ -76,75 +116,38 @@
 
               <li>
                 <a
-                  class="bg-[#030712] bg-opacity-10 border-[#12132d] border-opacity-30 rounded-full w-[56px] aspect-square flex justify-center items-center hover:bg-gray-50 tooltip tooltip-right"
+                  class="bg-[#030712] bg-opacity-10 border-[#12132d] border-opacity-30 rounded-full w-[56px] aspect-square flex justify-center items-center hover:bg-gray-50 tooltip"
                   data-tip="write to us"
                   ><i class="fa-solid fa-pen"></i
                 ></a>
               </li>
               <li>
                 <a
-                  class="bg-[#030712] bg-opacity-10 border-[#12132d] border-opacity-30 rounded-full w-[56px] aspect-square flex justify-center items-center hover:bg-gray-50 tooltip tooltip-right"
+                  class="bg-[#030712] bg-opacity-10 border-[#12132d] border-opacity-30 rounded-full w-[56px] aspect-square flex justify-center items-center hover:bg-gray-50 tooltip"
                   data-tip="connet"
                   ><i class="fa-solid fa-user-plus"></i
                 ></a>
               </li>
               <li>
                 <a
-                  class="bg-[#030712] bg-opacity-10 border-[#12132d] border-opacity-30 rounded-full w-[56px] aspect-square flex justify-center items-center hover:bg-gray-50 tooltip tooltip-right"
+                  class="bg-[#030712] bg-opacity-10 border-[#12132d] border-opacity-30 rounded-full w-[56px] aspect-square flex justify-center items-center hover:bg-gray-50 tooltip"
                   data-tip="Brands"
                   ><i class="fa-brands fa-font-awesome"></i
                 ></a>
               </li>
             </ul>
           </div>
-          <a
-            class="btn btn-ghost md:text-4xl text-2xl font-black text-[#12132d] font-mulish"
-            >ReTro</a
-          >
-        </div>
-        <div class="navbar-end grow hidden lg:flex">
-          <ul class="menu menu-horizontal px-1 lg:flex lg:gap-4">
-            <li>
-              <a
-                class="bg-[#030712] bg-opacity-10 border-[#12132d] border-opacity-30 rounded-full w-[56px] aspect-square flex justify-center items-center hover:bg-gray-50 tooltip"
-                data-tip="Home"
-                ><i class="fa-solid fa-house"></i
-              ></a>
-            </li>
-
-            <li>
-              <a
-                class="bg-[#030712] bg-opacity-10 border-[#12132d] border-opacity-30 rounded-full w-[56px] aspect-square flex justify-center items-center hover:bg-gray-50 tooltip"
-                data-tip="write to us"
-                ><i class="fa-solid fa-pen"></i
-              ></a>
-            </li>
-            <li>
-              <a
-                class="bg-[#030712] bg-opacity-10 border-[#12132d] border-opacity-30 rounded-full w-[56px] aspect-square flex justify-center items-center hover:bg-gray-50 tooltip"
-                data-tip="connet"
-                ><i class="fa-solid fa-user-plus"></i
-              ></a>
-            </li>
-            <li>
-              <a
-                class="bg-[#030712] bg-opacity-10 border-[#12132d] border-opacity-30 rounded-full w-[56px] aspect-square flex justify-center items-center hover:bg-gray-50 tooltip"
-                data-tip="Brands"
-                ><i class="fa-brands fa-font-awesome"></i
-              ></a>
-            </li>
-          </ul>
-        </div>
-        <div class="grow justify-end mr-0 md:ml-10 hover:bg-gray-50">
-          <a
-            class="btn px-[30px] py-2 md:px-[40px] md:py-4 bg-[#7978ff] text-white font-mulish md:text-xl text-sm font-bold h-auto rounded-full"
-            >Sign In</a
-          >
+          <div class="grow justify-end mr-0 md:ml-10 hover:bg-gray-50">
+            <a
+              class="btn px-[30px] py-2 md:px-[40px] md:py-4 bg-[#7978ff] text-white font-mulish md:text-xl text-sm font-bold h-auto rounded-full"
+              >Sign In</a
+            >
+          </div>
         </div>
       </div>
     </header>
 
-    <main class="container mx-auto">
+    <main class="container mx-auto px-5 md:px-24">
       <!-- banner section -->
       <section class="md:mt-12 md:mb-24">
         <div
@@ -217,6 +220,216 @@
           </div>
         </div>
       </section>
+
+      <!-- lets discuss section -->
+      <section class="mt-16 mb-24">
+        <!-- static part -->
+        <div class="space-y-6 text-center mb-10">
+          <h3 class="md:text-4xl text-3xl font-black font-mullish">
+            Let’s Discuss
+          </h3>
+          <p
+            class="md:max-w-[690px] mx-auto text-xl font-inter font-medium text-[#12132d] text-opacity-60"
+          >
+            Yes, you can run unit tests and view the results directly within the
+            app. The integrated testing features allow for a streamlined .
+          </p>
+        </div>
+        <!-- dynamic section -->
+
+        <div class="flex flex-col md:flex-row gap-10">
+          <!-- left part  -->
+          <div class="space-y-7">
+            <!-- card 1 -->
+            <div
+              class="flex flex-col md:flex-row bg-[#f3f3f5] p-10 rounded-2xl gap-6"
+            >
+              <!-- avatar -->
+              <div class="text-center">
+                <div class="avatar online">
+                  <div class="w-24 rounded-full">
+                    <img
+                      src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- details -->
+              <div class="space-y-5">
+                <div
+                  class="flex text-sm font-medium text-primary-text text-opacity-80 font-inter gap-5 sm:text-center"
+                >
+                  <p class="genre">#music</p>
+                  <p>Author : <span class="author">Awlad Hossain</span></p>
+                </div>
+                <!-- title -->
+                <div class="font-mullish text-primary-text text-xl font-bold">
+                  10 Kids Unaware of Their Halloween Costume
+                </div>
+                <!-- description -->
+                <p
+                  class="font-mullish text-base text-primary-text font-normal text-opacity-60 max-w-[570px] border-[1px] border-b-primary-text border-opacity-25 border-dashed pb-7"
+                >
+                  It’s one thing to subject yourself to ha Halloween costume
+                  mishap because, hey that’s your prerogative
+                </p>
+
+                <!-- additional info -->
+                <div class="flex justify-between items-center">
+                  <div
+                    class="flex gap-7 text-primary-text text-opacity-60 text-base"
+                  >
+                    <div>
+                      <i class="fa-solid fa-message"></i>
+                      <span>340</span>
+                    </div>
+                    <div>
+                      <i class="fa-regular fa-eye"></i>
+                      <span>340</span>
+                    </div>
+                    <div>
+                      <i class="fa-regular fa-clock"></i>
+                      <span>340</span>
+                    </div>
+                  </div>
+                  <!-- msg button -->
+
+                  <div>
+                    <div
+                      class="w-8 aspect-square rounded-full bg-[#10b981] text-white flex justify-center items-center"
+                    >
+                      <i class="fa-solid fa-envelope-open"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- card - 2 -->
+            <div
+              class="w-full flex flex-col md:flex-row bg-[#f3f3f5] p-10 rounded-2xl gap-6"
+            >
+              <!-- avatar -->
+              <div class="text-center">
+                <div class="avatar online">
+                  <div class="w-24 rounded-full">
+                    <img
+                      src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- details -->
+              <div class="space-y-5">
+                <div
+                  class="flex text-sm font-medium text-primary-text text-opacity-80 font-inter gap-5 sm:textce"
+                >
+                  <p class="genre">#music</p>
+                  <p>Author : <span class="author">Awlad Hossain</span></p>
+                </div>
+                <!-- title -->
+                <div class="font-mullish text-primary-text text-xl font-bold">
+                  10 Kids Unaware of Their Halloween Costume
+                </div>
+                <!-- description -->
+                <p
+                  class="font-mullish text-base text-primary-text font-normal text-opacity-60 max-w-[570px] border-[1px] border-b-primary-text border-opacity-25 border-dashed pb-7"
+                >
+                  It’s one thing to subject yourself to ha Halloween costume
+                  mishap because, hey that’s your prerogative
+                </p>
+
+                <!-- additional info -->
+                <div class="flex justify-between items-center">
+                  <div
+                    class="flex gap-7 text-primary-text text-opacity-60 text-base"
+                  >
+                    <div>
+                      <i class="fa-solid fa-message"></i>
+                      <span>340</span>
+                    </div>
+                    <div>
+                      <i class="fa-regular fa-eye"></i>
+                      <span>340</span>
+                    </div>
+                    <div>
+                      <i class="fa-regular fa-clock"></i>
+                      <span>340</span>
+                    </div>
+                  </div>
+                  <!-- msg button -->
+
+                  <div>
+                    <div
+                      class="w-8 aspect-square rounded-full bg-[#10b981] text-white flex justify-center items-center"
+                    >
+                      <i class="fa-solid fa-envelope-open"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- right paart -->
+          <div class="bg-[#f3f3f5] p-7 h-fit grow rounded-2xl">
+            <div class="space-y-6">
+              <!-- title -->
+              <div class="flex justify-between items-center space-y-5">
+                <h1 class="text-xl text-primary-text font-mullish font-bold">
+                  Title
+                </h1>
+
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-check-double text-[#10b981]"></i>
+                  <p
+                    class="text-primary-text text-opacity-60 font-inter text-base"
+                  >
+                    mark as read (<span id="read-num">4</span>)
+                  </p>
+                </div>
+              </div>
+              <!-- card title 1  -->
+              <div
+                class="bg-white p-4 rounded-xl flex justify-between items-center"
+              >
+                <p
+                  id="card-title"
+                  class="font-mullish text-base text-primary-text md:max-w-[212px]"
+                >
+                  10 Kids Unaware of Their Halloween Costume
+                </p>
+                <div>
+                  <div class="flex gap-2 items-center">
+                    <i class="fa-regular fa-eye"></i>
+                    <span>340</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- card title 2  -->
+              <div
+                class="bg-white p-4 rounded-xl flex justify-between items-center"
+              >
+                <p
+                  id="card-title"
+                  class="font-mullish text-base text-primary-text md:max-w-[212px]"
+                >
+                  10 Kids Unaware of Their Halloween Costume
+                </p>
+                <div>
+                  <div class="flex gap-2 items-center">
+                    <i class="fa-regular fa-eye"></i>
+                    <span>340</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <!-- script file -->
+    <script src="script.js"></script>
   </body>
 </html>
