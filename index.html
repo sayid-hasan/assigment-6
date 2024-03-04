@@ -235,143 +235,22 @@
             app. The integrated testing features allow for a streamlined .
           </p>
         </div>
+
+        <!-- loader -->
+        <div id="loader" class="flex justify-center">
+          <span class="loading loading-spinner loading-lg"></span>
+        </div>
         <!-- dynamic section -->
 
         <div class="flex flex-col md:flex-row gap-10">
           <!-- left part  -->
-          <div class="space-y-7">
-            <!-- card 1 -->
-            <div
-              class="flex flex-col md:flex-row bg-[#f3f3f5] p-10 rounded-2xl gap-6"
-            >
-              <!-- avatar -->
-              <div class="text-center">
-                <div class="avatar online">
-                  <div class="w-24 rounded-full">
-                    <img
-                      src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                    />
-                  </div>
-                </div>
-              </div>
-              <!-- details -->
-              <div class="space-y-5">
-                <div
-                  class="flex text-sm font-medium text-primary-text text-opacity-80 font-inter gap-5 sm:text-center"
-                >
-                  <p class="genre">#music</p>
-                  <p>Author : <span class="author">Awlad Hossain</span></p>
-                </div>
-                <!-- title -->
-                <div class="font-mullish text-primary-text text-xl font-bold">
-                  10 Kids Unaware of Their Halloween Costume
-                </div>
-                <!-- description -->
-                <p
-                  class="font-mullish text-base text-primary-text font-normal text-opacity-60 max-w-[570px] border-[1px] border-b-primary-text border-opacity-25 border-dashed pb-7"
-                >
-                  It’s one thing to subject yourself to ha Halloween costume
-                  mishap because, hey that’s your prerogative
-                </p>
-
-                <!-- additional info -->
-                <div class="flex justify-between items-center">
-                  <div
-                    class="flex gap-7 text-primary-text text-opacity-60 text-base"
-                  >
-                    <div>
-                      <i class="fa-solid fa-message"></i>
-                      <span>340</span>
-                    </div>
-                    <div>
-                      <i class="fa-regular fa-eye"></i>
-                      <span>340</span>
-                    </div>
-                    <div>
-                      <i class="fa-regular fa-clock"></i>
-                      <span>340</span>
-                    </div>
-                  </div>
-                  <!-- msg button -->
-
-                  <div>
-                    <div
-                      class="w-8 aspect-square rounded-full bg-[#10b981] text-white flex justify-center items-center"
-                    >
-                      <i class="fa-solid fa-envelope-open"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- card - 2 -->
-            <div
-              class="w-full flex flex-col md:flex-row bg-[#f3f3f5] p-10 rounded-2xl gap-6"
-            >
-              <!-- avatar -->
-              <div class="text-center">
-                <div class="avatar online">
-                  <div class="w-24 rounded-full">
-                    <img
-                      src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                    />
-                  </div>
-                </div>
-              </div>
-              <!-- details -->
-              <div class="space-y-5">
-                <div
-                  class="flex text-sm font-medium text-primary-text text-opacity-80 font-inter gap-5 sm:textce"
-                >
-                  <p class="genre">#music</p>
-                  <p>Author : <span class="author">Awlad Hossain</span></p>
-                </div>
-                <!-- title -->
-                <div class="font-mullish text-primary-text text-xl font-bold">
-                  10 Kids Unaware of Their Halloween Costume
-                </div>
-                <!-- description -->
-                <p
-                  class="font-mullish text-base text-primary-text font-normal text-opacity-60 max-w-[570px] border-[1px] border-b-primary-text border-opacity-25 border-dashed pb-7"
-                >
-                  It’s one thing to subject yourself to ha Halloween costume
-                  mishap because, hey that’s your prerogative
-                </p>
-
-                <!-- additional info -->
-                <div class="flex justify-between items-center">
-                  <div
-                    class="flex gap-7 text-primary-text text-opacity-60 text-base"
-                  >
-                    <div>
-                      <i class="fa-solid fa-message"></i>
-                      <span>340</span>
-                    </div>
-                    <div>
-                      <i class="fa-regular fa-eye"></i>
-                      <span>340</span>
-                    </div>
-                    <div>
-                      <i class="fa-regular fa-clock"></i>
-                      <span>340</span>
-                    </div>
-                  </div>
-                  <!-- msg button -->
-
-                  <div>
-                    <div
-                      class="w-8 aspect-square rounded-full bg-[#10b981] text-white flex justify-center items-center"
-                    >
-                      <i class="fa-solid fa-envelope-open"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div id="post-container" class="space-y-7"></div>
 
           <!-- right paart -->
-          <div class="bg-[#f3f3f5] p-7 h-fit grow rounded-2xl">
+          <div
+            id="title-Container"
+            class="bg-[#f3f3f5] p-7 h-fit grow rounded-2xl space-y-6"
+          >
             <div class="space-y-6">
               <!-- title -->
               <div class="flex justify-between items-center space-y-5">
@@ -386,41 +265,6 @@
                   >
                     mark as read (<span id="read-num">4</span>)
                   </p>
-                </div>
-              </div>
-              <!-- card title 1  -->
-              <div
-                class="bg-white p-4 rounded-xl flex justify-between items-center"
-              >
-                <p
-                  id="card-title"
-                  class="font-mullish text-base text-primary-text md:max-w-[212px]"
-                >
-                  10 Kids Unaware of Their Halloween Costume
-                </p>
-                <div>
-                  <div class="flex gap-2 items-center">
-                    <i class="fa-regular fa-eye"></i>
-                    <span>340</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- card title 2  -->
-              <div
-                class="bg-white p-4 rounded-xl flex justify-between items-center"
-              >
-                <p
-                  id="card-title"
-                  class="font-mullish text-base text-primary-text md:max-w-[212px]"
-                >
-                  10 Kids Unaware of Their Halloween Costume
-                </p>
-                <div>
-                  <div class="flex gap-2 items-center">
-                    <i class="fa-regular fa-eye"></i>
-                    <span>340</span>
-                  </div>
                 </div>
               </div>
             </div>
