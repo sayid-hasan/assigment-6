@@ -1,6 +1,7 @@
 let titleContainer = document.getElementById("title-Container");
 let loader = document.getElementById("loader");
 let postContainer = document.getElementById("post-container");
+let latestPostContainer = document.getElementById("latest-cards");
 
 async function loadAllPost() {
   let url = "https://openapi.programming-hero.com/api/retro-forum/posts";
@@ -18,7 +19,7 @@ function displayAllPosts(elements) {
 
   //console.log(postContainer);
   elements.forEach((element) => {
-    console.log(element);
+    //console.log(element);
 
     //show element in dynamic text left part
 
@@ -159,10 +160,82 @@ async function searchData() {
   let res = await fetch(url);
   let data = await res.json();
   let items = data.posts;
-  console.log(items);
+  //console.log(items);
   postContainer.innerHTML = ``;
 
   displayAllPosts(items);
 }
+
+// latest cards
+
+async function latestCards() {
+  let url = "https://openapi.programming-hero.com/api/retro-forum/latest-posts";
+  let res = await fetch(url);
+  let data = await res.json();
+  createLatestPost(data);
+}
+function createLatestPost(elems) {
+  elems.forEach((elem) => {
+    console.log(elem);
+    let latestCard = document.createElement("div");
+    latestCard.classList = `card bg-base-100 shadow-xl border-[1px] border-solid border-primary-text border-opacity-15`;
+    let date = elem.author["posted_date"] || "No publish date";
+    latestCard.innerHTML = `
+
+      <figure class="px-10 pt-10 ">
+                <img class='rounded-2xl' src=${elem.cover_image} alt="" />
+              </figure>
+              <!-- calender -->
+              <div
+                class="flex px-10 mt-6 mb-3 justify-start items-center gap-3 text-primary-text text-opacity-50"
+              >
+                <i class="fa-solid fa-calendar-days"></i>
+                    <p class="text-left">${date}  </p>
+              </div>
+
+              <div class="px-10 space-y-3 font-mullish items-center pb-6">
+                <h2 class="card-title text-primary-text font-extrabold text-lg">
+                  ${elem.title}
+                </h2>
+                <p
+                  class="text-primary-text text-opacity-60 font-normal text-base"
+                >
+                  ${elem.description}
+                </p>
+                <div class="flex gap-5 items-center py-5  min-h-10">
+                  <div>
+                    <div class="avatar">
+                      <div
+                        class="w-[44px] rounded-full ring ring-primary ring-offset-base-100 ring-offset-2"
+                      >
+                        <img
+                          src=${elem["profile_image"]}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="name text-base font-bold font-mullish">
+                      ${elem.author.name}
+                    </div>
+                    <div
+                      class="profession text-primary-text text-opacity-60 font-mullish text-sm"
+                    >
+                      ${
+                        elem.author.designation
+                          ? elem.author.designation
+                          : "Unknown"
+                      }
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+    
+      `;
+    latestPostContainer.appendChild(latestCard);
+  });
+}
+latestCards();
 searchData();
 loadAllPost();
