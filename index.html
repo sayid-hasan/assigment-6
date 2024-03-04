@@ -174,16 +174,17 @@
               class="bg-white p-2 rounded-full placeholder:font-mullish placeholder:text-[#12132d] placeholder:opacity-50 placeholder:text-base placeholder:font-black flex justify-between"
             >
               <input
-                class="appearance-none bg-transparent border-none outline-none text-black px-7"
+                class="appearance-none focus:appearance-none bg-transparent border-none outline-none text-black px-7"
                 type="text"
                 id="search"
                 placeholder="search something here"
               />
 
               <button
+                onclick="searchData()"
                 class="btn px-[30px] md:px-[40px] py-3 bg-[#7978ff] text-white font-mulish md:text-xl text-sm font-bold h-auto rounded-full"
               >
-                Sign In
+                search
               </button>
             </p>
           </div>
@@ -263,7 +264,7 @@
                   <p
                     class="text-primary-text text-opacity-60 font-inter text-base"
                   >
-                    mark as read (<span id="read-num">4</span>)
+                    mark as read (<span id="read-num">0</span>)
                   </p>
                 </div>
               </div>

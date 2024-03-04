@@ -16,7 +16,7 @@ async function loadAllPost() {
 function displayAllPosts(elements) {
   //console.log(elements);
 
-  console.log(postContainer);
+  //console.log(postContainer);
   elements.forEach((element) => {
     console.log(element);
 
@@ -109,10 +109,12 @@ function displayAllPosts(elements) {
 //   //show element in dynamic text right part
 
 async function createTitle(title, view) {
+  let readNum = document.getElementById("read-num");
+
   let titleCard = document.createElement("div");
   titleCard.innerHTML = `
      <div
-                class="bg-white p-4 rounded-xl flex justify-between items-center"
+                class="bg-white p-4 rounded-xl flex justify-between items-center title-card"
               >
                 <p
                 
@@ -130,6 +132,9 @@ async function createTitle(title, view) {
     `;
 
   titleContainer.appendChild(titleCard);
+
+  let count = document.getElementsByClassName("title-card").length;
+  readNum.innerHTML = count;
 }
 
 // loader functionality
@@ -143,4 +148,21 @@ function loaderFunc(status) {
     postContainer.classList.remove("hidden");
   }
 }
+
+// search bar functionality
+
+async function searchData() {
+  let search = document.getElementById("search");
+  let searchText = search.value;
+
+  let url = `https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchText}`;
+  let res = await fetch(url);
+  let data = await res.json();
+  let items = data.posts;
+  console.log(items);
+  postContainer.innerHTML = ``;
+
+  displayAllPosts(items);
+}
+searchData();
 loadAllPost();
