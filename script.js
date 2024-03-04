@@ -40,7 +40,7 @@ function displayAllPosts(elements) {
                 </div>
               </div>
               <!-- details -->
-              <div class="space-y-5">
+              <div class="space-y-7 w-full">
                 <div
                   class="flex text-sm font-medium text-primary-text text-opacity-80 font-inter gap-5 sm:text-center"
                 >
@@ -53,13 +53,13 @@ function displayAllPosts(elements) {
                 </div>
                 <!-- description -->
                 <p
-                  class="font-mullish text-base text-primary-text font-normal text-opacity-60 max-w-[400px] border-[1px] border-b-primary-text border-opacity-25 border-dashed pb-7"
+                  class="font-mullish text-base text-primary-text font-normal text-opacity-60 max-w-[670px] border-[1px] border-b-primary-text border-opacity-25 border-dashed pb-7"
                 >
                   ${element.description}
                 </p>
 
                 <!-- additional info -->
-                <div class="flex justify-between items-center">
+                <div class="flex justify-between w-full items-center">
                   <div
                     class="flex gap-7 text-primary-text text-opacity-60 text-base"
                   >
@@ -143,6 +143,8 @@ async function createTitle(title, view) {
 function loaderFunc(status) {
   if (status) {
     loader.classList.remove("hidden");
+    titleContainer.classList.add("hidden");
+    postContainer.classList.add("hidden");
   } else {
     loader.classList.add("hidden");
     titleContainer.classList.remove("hidden");
@@ -176,7 +178,7 @@ async function latestCards() {
 }
 function createLatestPost(elems) {
   elems.forEach((elem) => {
-    console.log(elem);
+    //console.log(elem);
     let latestCard = document.createElement("div");
     latestCard.classList = `card bg-base-100 shadow-xl border-[1px] border-solid border-primary-text border-opacity-15`;
     let date = elem.author["posted_date"] || "No publish date";
