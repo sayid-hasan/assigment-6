@@ -53,7 +53,7 @@ function displayAllPosts(elements) {
                 </div>
                 <!-- description -->
                 <p
-                  class="font-mullish text-base text-primary-text font-normal text-opacity-60 max-w-[570px] border-[1px] border-b-primary-text border-opacity-25 border-dashed pb-7"
+                  class="font-mullish text-base text-primary-text font-normal text-opacity-60 max-w-[400px] border-[1px] border-b-primary-text border-opacity-25 border-dashed pb-7"
                 >
                   ${element.description}
                 </p>
@@ -80,7 +80,7 @@ function displayAllPosts(elements) {
 
                   <div>
                     <div
-                      class="w-8 aspect-square rounded-full bg-[#10b981] text-white flex justify-center items-center" onclick =" createTitle( '${element.title}','${element["view_count"]}')"
+                      class="w-8 aspect-square rounded-full bg-[#10b981] text-white flex justify-center items-center" onclick ="createTitle('${element.title}','${element["view_count"]}')"
                     >
                       <i class="fa-solid fa-envelope-open"></i>
                     </div>
@@ -198,7 +198,7 @@ function createLatestPost(elems) {
                   ${elem.title}
                 </h2>
                 <p
-                  class="text-primary-text text-opacity-60 font-normal text-base"
+                  class="text-primary-text text-opacity-60 font-normal text-base min-h-20"
                 >
                   ${elem.description}
                 </p>
